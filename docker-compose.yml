@@ -1,0 +1,23 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pollen_backend
+    ports:
+      - "3002:3002"
+
+  frontend:
+    build:
+      context: ./frontend/vite-project
+      dockerfile: Dockerfile
+    container_name: pollen_frontend
+    volumes:
+      - ./frontend:/app/frontend/vite-project
+      - exclude:/app/frontend/node_modules
+
+    ports:
+      - "5173:5173"
+volumes:
+  exclude: null

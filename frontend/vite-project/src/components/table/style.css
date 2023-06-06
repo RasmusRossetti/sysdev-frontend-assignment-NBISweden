@@ -1,0 +1,57 @@
+.cities-row {
+  display: flex;
+  flex-direction: row;
+}
+table {
+  background-color: rgb(243, 235, 235);
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+thead tr th {
+  padding: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 800;
+  color: rgb(127, 127, 127);
+}
+tbody tr td {
+  padding: 2rem;
+  background-color: rgb(238, 237, 237);
+}
+table,
+tbody,
+tr {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.153) 0px 3px 8px;
+}
+
+.graph {
+  height: 8px;
+  border-radius: 5px;
+  transition: transform 0.4s;
+  position: relative;
+  left: 40px;
+}
+.graph:hover {
+  transform: scale(1.2);
+}
+
+.graph.green {
+  background-color: green;
+}
+
+.graph.yellow {
+  background-color: yellow;
+}
+
+.graph.red {
+  background-color: red;
+}
+tr.alternate-row {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+img {
+  height: 10px;
+  margin-left: 5px;
+}
